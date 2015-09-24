@@ -1,0 +1,25 @@
+/**
+ * App-wide Styles
+ */
+
+ .main-shell {
+   .profile-container {
+     height: 100%;
+     font-size: 14px;
+
+     .profile-name {
+       font-weight: 500;
+     }
+   }
+ }
+
+// Component styles are injected through grunt
+// injector
+@import 'main/main.scss';
+@import 'subviews/dropfile1/dropfile1.scss';
+@import 'subviews/dropfile2/dropfile2.scss';
+@import 'subviews/dropfile3/dropfile3.scss';
+@import 'subviews/initial/initial.scss';
+@import 'subviews/spazio1/spazio1.scss';
+@import 'wizard/wizard.scss';
+// endinjector

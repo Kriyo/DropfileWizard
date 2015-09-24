@@ -1,0 +1,37 @@
+<div ng-controller="ShellCtrl" class="main-shell">
+
+  <md-sidenav class="md-sidenav-left md-whiteframe-z2" md-component-id="left">
+    <md-toolbar class="md-accent">
+      <h1 class="md-toolbar-tools">Primeur Dropfile</h1>
+    </md-toolbar>
+    <md-content layout-padding>
+      <md-subheader class="md-primary">Configuration</md-subheader>
+      <md-divider></md-divider>
+      <md-list>
+        <md-list-item class="df-menu-link" md-ink-ripple layout="row" layout-align="start center">
+          <ng-md-icon icon="home" style="fill: #2b2b2b" size="20"></ng-md-icon>
+          <a class="md-no-sticky" href="/">Home</a>
+        </md-list-item>
+      </md-list>
+      <md-divider></md-divider>
+      <md-list>
+        <md-list-item class="df-menu-link" md-ink-ripple layout="row" layout-align="start center">
+          <ng-md-icon icon="dns" style="fill: #2b2b2b" size="20"></ng-md-icon>
+          <a class="md-no-sticky" href="/wizard/initial">Wizard</a>
+        </md-list-item>
+      </md-list>
+      <md-divider></md-divider>
+    </md-content>
+  </md-sidenav>
+
+  <md-toolbar>
+    <div class="md-toolbar-tools">
+      <md-button ng-click="toggleLeft()" class="md-icon-button" aria-label="Settings">
+        <md-icon md-svg-icon="assets/icons/menu.svg"></md-icon>
+      </md-button>
+      <h2><span>Primeur Dropfile</span></h2>
+      <span flex=""></span>
+    </div>
+  </md-toolbar>
+
+</div>
