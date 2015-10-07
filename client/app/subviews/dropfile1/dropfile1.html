@@ -1,6 +1,6 @@
 
 <div layout="column" class="inputdemoBasicUsage">
-  <h2 class="md-display-1">Dropfile Properties</h2>
+  <h2 class="md-display-1">Dropfile POP3 and SMTP Email Connection Configuration</h2>
 
   <div layout layout-sm="column">
     <md-input-container flex>
@@ -15,15 +15,39 @@
   </div>
 
   <div layout layout-sm="column">
+    <p>SMTP and POP3 Protocol</p>
+   <md-radio-group ng-model="formData.mailSmtpPopProtocol">
+     <md-radio-button value="SSL" class="md-primary">SSL</md-radio-button>
+     <md-radio-button value="TLS">TLS</md-radio-button>
+   </md-radio-group>
+  </div>
+
+  <div layout layout-sm="column">
     <md-input-container flex>
-      <md-checkbox ng-model="formData.mailSSLEnabled" aria-label="Checkbox 4">
+      <md-checkbox ng-disabled="formData.mailSmtpPopProtocol=='TLS'"
+      ng-model="formData.mailSSLEnabled" aria-label="Checkbox 4">
         Mail SSL Enabled
+      </md-checkbox>
+    </md-input-container>
+    <md-input-container flex>
+      <md-checkbox ng-disabled="formData.mailSmtpPopProtocol=='SSL'"
+       ng-model="formData.mailTSLEnabled" aria-label="Checkbox 4">
+        Mail TLS Enabled
+    </md-input-container>
+  </div>
+
+  <div layout layout-sm="column">
+    <md-input-container flex>
+      <md-checkbox ng-disabled="formData.mailSmtpPopProtocol=='TLS'"
+       ng-model="formData.mailServerPopSSLEnabled" aria-label="Checkbox 7">
+        Pop3 SSL Enabled
       </md-checkbox>
     </md-input-container>
 
     <md-input-container flex>
-      <md-checkbox ng-model="formData.mailTSLEnabled" aria-label="Checkbox 4">
-        Mail TSL Enabled
+      <md-checkbox ng-disabled="formData.mailSmtpPopProtocol=='SSL'"
+       ng-model="formData.mailServerPopTSLEnabled" aria-label="Checkbox 8">
+        Pop3 TLS Enabled
     </md-input-container>
   </div>
 
@@ -72,19 +96,6 @@
     <md-input-container flex>
       <label>Pop3 Password</label>
       <input type="password" ng-model="formData.mailServerPop3Password">
-    </md-input-container>
-  </div>
-
-  <div layout layout-sm="column">
-    <md-input-container flex>
-      <md-checkbox ng-model="formData.mailServerPopSSLEnabled" aria-label="Checkbox 7">
-        Pop3 SSL Enabled
-      </md-checkbox>
-    </md-input-container>
-
-    <md-input-container flex>
-      <md-checkbox ng-model="formData.mailServerPopTSLEnabled" aria-label="Checkbox 8">
-        Pop3 TSL Enabled
     </md-input-container>
   </div>
 

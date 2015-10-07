@@ -1,7 +1,7 @@
 <!-- Initial partial view for the configuration wizard-->
 
 <div layout="column" class="inputdemoBasicUsage">
-  <h2 class="md-display-1">Spazio Configuration</h2>
+  <h2 class="md-display-1">Spazio MFT/S Configuration</h2>
 
   <div layout layout-sm="column">
     <md-input-container flex>
@@ -41,7 +41,7 @@
 
   <div layout layout-sm="column">
     <md-input-container flex>
-      <label>Spazio MFT</label>
+      <label>Spazio MFT/S</label>
       <input ng-model="formData.spazioMFTConfig">
     </md-input-container>
 
@@ -52,17 +52,7 @@
   </div>
 
   <div layout layout-sm="column">
-    <md-input-container flex>
-      <label>Spazio HTTP Port</label>
-      <input ng-model="formData.httpPortSpHttp">
-    </md-input-container>
-
-    <md-input-container flex>
-      <label>Spazio Master Port</label>
-      <input ng-model="formData.masterPortSpHttp">
-    </md-input-container>
-
-    <md-content layout-padding="50" layout="row" layout-sm="column">
+    <md-content layout="row" layout-sm="column">
       <md-input-container flex>
         <md-checkbox ng-model="formData.sslSpHttp" aria-label="Checkbox 4">
           SSL Enabled on HTTP
@@ -71,10 +61,22 @@
     </md-content>
   </div>
 
+  <div layout layout-sm="column">
+    <md-input-container flex>
+      <label>Spazio MFT/S HTTP Port</label>
+      <input ng-model="formData.httpPortSpHttp">
+    </md-input-container>
+
+    <md-input-container flex>
+      <label>Spazio Master Port</label>
+      <input ng-model="formData.masterPortSpHttp">
+    </md-input-container>
+  </div>
+
   <div class="spazio1-page" layout="row" layout-align="end center">
-    <md-button ui-sref="wizard.initial">
+    <!-- <md-button ui-sref="wizard.initial">
        <ng-md-icon icon="keyboard_arrow_left" size="25"></ng-md-icon> Previous Section
-    </md-button>
+    </md-button> -->
     <md-button ui-sref="wizard.dropfile1">
       Next Section <ng-md-icon icon="keyboard_arrow_right" size="25"></ng-md-icon>
     </md-button>
