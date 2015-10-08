@@ -1,0 +1,57 @@
+
+<div layout="column" class="inputdemoBasicUsage">
+  <h2 class="md-display-1">Dropfile EndPoint Configuration</h2>
+
+  <div layout layout-sm="column">
+    <md-input-container flex>
+      <label>FSR Web Service End Point</label>
+      <input ng-model="formData.fsrWebServiceEndPoint">
+    </md-input-container>
+  </div>
+
+  <div layout layout-sm="column">
+    <md-input-container flex>
+      <label>A3 Sever End Point Url IP</label>
+      <input ng-model="formData.a3ServerEndPointUrlIp">
+    </md-input-container>
+
+    <md-input-container flex>
+      <label>A3 Server End Point Url Port</label>
+      <input ng-model="formData.a3ServerEndPointUrlPort ">
+    </md-input-container>
+  </div>
+
+  <div layout layout-sm="column">
+    <md-input-container flex>
+      <label>Dropfile Broker AMQ Url IP</label>
+      <input ng-model="formData.dropfileBrokerAmqUrlIp">
+    </md-input-container>
+
+    <md-input-container flex>
+      <label>Dropfile Broker AMQ Url Port</label>
+      <input ng-model="formData.dropfileBrokenAmqUrlPort">
+    </md-input-container>
+  </div>
+
+  <div layout layout-sm="column">
+    <md-input-container flex>
+      <label>Dropfile Reports White List Users</label>
+      <input ng-model="formData.dropfileReportsUsersWhiteList">
+    </md-input-container>
+<!-- 
+    <md-input-container flex>
+      <label>Dropfile Mobile Apk FileName</label>
+      <input ng-model="formData.dropfileMobileApkFileName">
+    </md-input-container> -->
+  </div>
+
+  <div class="df3-page" layout="row" layout-align="end center">
+    <md-button ui-sref="wizard.dropfile2">
+       <ng-md-icon icon="keyboard_arrow_left" size="25"></ng-md-icon> Previous Section
+    </md-button>
+    <md-button type="submit">
+       <ng-md-icon icon="check" size="25"></ng-md-icon> Submit
+    </md-button>
+  </div>
+
+</div>

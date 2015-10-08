@@ -1,0 +1,85 @@
+<!-- Initial partial view for the configuration wizard-->
+
+<div layout="column" class="inputdemoBasicUsage">
+  <h2 class="md-display-1">Spazio MFT/S Configuration</h2>
+
+  <div layout layout-sm="column">
+    <md-input-container flex>
+      <label>Central Node Host IP</label>
+      <input ng-model="formData.centralNodeHostIp">
+    </md-input-container>
+
+    <md-input-container flex>
+      <label>Disposition Type</label>
+      <input ng-model="formData.dispositionType">
+    </md-input-container>
+  </div>
+
+  <div layout layout-sm="column">
+    <md-input-container flex>
+      <label>Username</label>
+      <input ng-model="formData.spazioUserName">
+    </md-input-container>
+
+    <md-input-container flex>
+      <label>Password</label>
+      <input type="password" ng-model="formData.spazioPassword">
+    </md-input-container>
+  </div>
+
+  <div layout layout-sm="column">
+    <md-input-container flex>
+      <label>Cert File Location</label>
+      <input ng-model="formData.certPathSpHttp">
+    </md-input-container>
+
+    <md-input-container flex>
+      <label>Key Path Location</label>
+      <input ng-model="formData.keyPathSpHttp">
+    </md-input-container>
+  </div>
+
+  <div layout layout-sm="column">
+    <md-input-container flex>
+      <label>Spazio MFT/S</label>
+      <input ng-model="formData.spazioMFTConfig">
+    </md-input-container>
+
+    <md-input-container flex>
+      <label>File Path Location</label>
+      <input ng-model="formData.fileSpHttp">
+    </md-input-container>
+  </div>
+
+  <div layout layout-sm="column">
+    <md-content layout="row" layout-sm="column">
+      <md-input-container flex>
+        <md-checkbox ng-model="formData.sslSpHttp" aria-label="Checkbox 4">
+          SSL Enabled on HTTP
+        </md-checkbox>
+      </md-input-container>
+    </md-content>
+  </div>
+
+  <div layout layout-sm="column">
+    <md-input-container flex>
+      <label>Spazio MFT/S HTTP Port</label>
+      <input ng-model="formData.httpPortSpHttp">
+    </md-input-container>
+
+    <md-input-container flex>
+      <label>Spazio Master Port</label>
+      <input ng-model="formData.masterPortSpHttp">
+    </md-input-container>
+  </div>
+
+  <div class="spazio1-page" layout="row" layout-align="end center">
+    <!-- <md-button ui-sref="wizard.initial">
+       <ng-md-icon icon="keyboard_arrow_left" size="25"></ng-md-icon> Previous Section
+    </md-button> -->
+    <md-button ui-sref="wizard.dropfile1">
+      Next Section <ng-md-icon icon="keyboard_arrow_right" size="25"></ng-md-icon>
+    </md-button>
+  </div>
+
+</div>

@@ -1,0 +1,111 @@
+
+<div layout="column" class="inputdemoBasicUsage">
+  <h2 class="md-display-1">Dropfile POP3 and SMTP Email Connection Configuration</h2>
+
+  <div layout layout-sm="column">
+    <md-input-container flex>
+      <label>Mail Server Host Name</label>
+      <input ng-model="formData.mailSMTPHostName">
+    </md-input-container>
+
+    <md-input-container flex>
+      <label>Mail SMTP Port</label>
+      <input ng-model="formData.mailSMTPPort">
+    </md-input-container>
+  </div>
+
+  <div layout layout-sm="column">
+    <p>SMTP and POP3 Protocol</p>
+   <md-radio-group ng-model="formData.mailSmtpPopProtocol">
+     <md-radio-button value="SSL" class="md-primary">SSL</md-radio-button>
+     <md-radio-button value="TLS">TLS</md-radio-button>
+   </md-radio-group>
+  </div>
+
+  <div layout layout-sm="column">
+    <md-input-container flex>
+      <md-checkbox ng-disabled="formData.mailSmtpPopProtocol=='TLS'"
+      ng-model="formData.mailSSLEnabled" aria-label="Checkbox 4">
+        Mail SSL Enabled
+      </md-checkbox>
+    </md-input-container>
+    <md-input-container flex>
+      <md-checkbox ng-disabled="formData.mailSmtpPopProtocol=='SSL'"
+       ng-model="formData.mailTSLEnabled" aria-label="Checkbox 4">
+        Mail TLS Enabled
+    </md-input-container>
+  </div>
+
+  <div layout layout-sm="column">
+    <md-input-container flex>
+      <md-checkbox ng-disabled="formData.mailSmtpPopProtocol=='TLS'"
+       ng-model="formData.mailServerPopSSLEnabled" aria-label="Checkbox 7">
+        Pop3 SSL Enabled
+      </md-checkbox>
+    </md-input-container>
+
+    <md-input-container flex>
+      <md-checkbox ng-disabled="formData.mailSmtpPopProtocol=='SSL'"
+       ng-model="formData.mailServerPopTSLEnabled" aria-label="Checkbox 8">
+        Pop3 TLS Enabled
+    </md-input-container>
+  </div>
+
+  <div layout layout-sm="column">
+    <md-input-container flex>
+      <label>Mail Username</label>
+      <input ng-model="formData.mailSMTPUserName">
+    </md-input-container>
+
+    <md-input-container flex>
+      <label>Mail Password</label>
+      <input type="password" ng-model="formData.mailSMTPPassword">
+    </md-input-container>
+  </div>
+
+  <div layout layout-sm="column">
+    <md-input-container flex>
+      <label>Mail Server SMTP From</label>
+      <input ng-model="formData.mailSMTPFrom">
+    </md-input-container>
+
+    <md-input-container flex>
+      <label>Mail Server (SMTP) From Personal</label>
+      <input ng-model="formData.mailSMTPFromPersonal">
+    </md-input-container>
+  </div>
+
+  <div layout layout-sm="column">
+    <md-input-container flex>
+      <label>Pop3 Host Name</label>
+      <input ng-model="formData.mailServerPop3HostName">
+    </md-input-container>
+
+    <md-input-container flex>
+      <label>Pop3 Port</label>
+      <input ng-model="formData.mailServerPop3Port">
+    </md-input-container>
+  </div>
+
+  <div layout layout-sm="column">
+    <md-input-container flex>
+      <label>Pop3 Username</label>
+      <input ng-model="formData.mailServerPop3User">
+    </md-input-container>
+
+    <md-input-container flex>
+      <label>Pop3 Password</label>
+      <input type="password" ng-model="formData.mailServerPop3Password">
+    </md-input-container>
+  </div>
+
+  <div class="df1-page" layout="row" layout-align="end center">
+    <md-button ui-sref="wizard.spazio1">
+       <ng-md-icon icon="keyboard_arrow_left" size="25"></ng-md-icon> Previous Section
+    </md-button>
+    <md-button ui-sref="wizard.dropfile2">
+      Next Section <ng-md-icon icon="keyboard_arrow_right" size="25"></ng-md-icon>
+    </md-button>
+  </div>
+
+</div>

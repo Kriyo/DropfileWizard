@@ -1,0 +1,42 @@
+<!-- Initial partial view for the configuration wizard-->
+<div layout="column" class="inputdemoBasicUsage">
+  <h2 class="md-display-1">Dropfile Configuration Wizard</h2>
+
+  <md-content layout-padding="50" layout="row" layout-sm="column">
+    <md-input-container>
+      <md-checkbox ng-model="formData.installAgreement" aria-label="Checkbox 1">
+        I agree to Install Primeur Dropfile on your computer
+      </md-checkbox>
+    </md-input-container>
+  </md-content>
+
+  <md-content layout-padding="50" layout="row" layout-sm="column">
+    <md-input-container>
+      <md-checkbox ng-model="formData.licenseAgreement" aria-label="Checkbox 2">
+        I have read the terms and conditions and wish to proceed
+      </md-checkbox>
+    </md-input-container>
+  </md-content>
+
+  <md-content layout-padding="50" layout="row" layout-sm="column">
+    <md-input-container>
+      <md-checkbox ng-model="formData.installSpazio" aria-label="Checkbox 3">
+        Would you like to install Spazio components?
+      </md-checkbox>
+    </md-input-container>
+  </md-content>
+
+  <md-content layout-padding="50" layout="row" layout-sm="column">
+    <md-input-container flex>
+        <label>Where should Primeur DropFile be installed?</label>
+        <input ng-model="formData.installLocation">
+      </md-input-container>
+  </md-content>
+
+  <div class="initial-page" layout="row" layout-align="end center">
+    <md-button ui-sref="wizard.spazio1">
+      Next Section <ng-md-icon icon="keyboard_arrow_right" size="25"></ng-md-icon>
+    </md-button>
+  </div>
+
+</div>

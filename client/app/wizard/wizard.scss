@@ -1,0 +1,96 @@
+a, button{
+  ng-md-icon{
+    svg{
+        position: relative;
+        top: 7px;
+    }
+  }
+}
+.df-card-container{
+  min-height: 730px;
+}
+#status-buttons {
+  a{
+    position: relative;
+    color:#FFF;
+    display:inline-block;
+    font-size:12px;
+    margin-right:10px;
+    text-align:center;
+    text-transform:uppercase;
+    text-decoration: none;
+  }
+  a.active span{
+    transition:0.5s all ease;
+    -moz-transition:0.5s all ease;
+    -webkit-transition:0.5s all ease;
+    background: rgb(255,204,1);
+  }
+  span{
+    line-height: 2.5;
+    text-decoration: none;
+    background-color: rgb(69,90,100);
+    color: rgba(255,255,255,0.87);
+    display:block;
+    height: 30px;
+    width: 30px;
+    position: relative;
+    border-radius:50%;
+  }
+}
+.df-menu-link{
+  a{
+    padding-left: 20px;
+    text-decoration: none;
+    color: #2b2b2b;
+  }
+}
+.card-contain{
+  min-height: 722px;
+}
+
+#config-form            { position:relative; min-height:300px; overflow:hidden; padding:30px; }
+#form-views             { width:auto; }
+
+/* basic styling for entering and leaving */
+/* left and right added to ensure full width */
+#form-views.ng-enter,
+#form-views.ng-leave      { position:absolute; left:30px; right:30px;
+    transition:0.5s all ease; -moz-transition:0.5s all ease; -webkit-transition:0.5s all ease;
+}
+
+#form-views.ng-enter {
+    -webkit-animation:slideInRight 0.5s both ease;
+    -moz-animation:slideInRight 0.5s both ease;
+    animation:slideInRight 0.5s both ease;
+}
+
+#form-views.ng-leave {
+    -webkit-animation:slideOutLeft 0.5s both ease;
+    -moz-animation:slideOutLeft 0.5s both ease;
+    animation:slideOutLeft 0.5s both ease;
+}
+
+@keyframes slideOutLeft {
+    to      { transform: translateX(-200%); }
+}
+@-moz-keyframes slideOutLeft {
+    to      { -moz-transform: translateX(-200%); }
+}
+@-webkit-keyframes slideOutLeft {
+    to      { -webkit-transform: translateX(-200%); }
+}
+
+/* slide in from the right */
+@keyframes slideInRight {
+    from    { transform:translateX(200%); }
+    to      { transform: translateX(0); }
+}
+@-moz-keyframes slideInRight {
+    from    { -moz-transform:translateX(200%); }
+    to      { -moz-transform: translateX(0); }
+}
+@-webkit-keyframes slideInRight {
+    from    { -webkit-transform:translateX(200%); }
+    to      { -webkit-transform: translateX(0); }
+}
