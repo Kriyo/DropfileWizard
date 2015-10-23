@@ -43,6 +43,6 @@ angular.module('dropfileWizardApp', [
      $mdThemingProvider.theme('default')
        .primaryPalette('dfYellow')
        .accentPalette('blue-grey', {
-         'default': '700' // use shade 200 for default, and keep all other shades the same
+         'default': '700'
        });
   });
