@@ -55,7 +55,7 @@ a, button{
 
 #form-views.ng-enter,
 
-#form-views.ng-leave { position:absolute; left:30px; right:30px;
+#form-views.ng-leave { position:absolute; left:30px; right:30px; overflow: hidden;
     transition:0.5s all ease; -moz-transition:0.5s all ease; -webkit-transition:0.5s all ease;
 }
 
@@ -81,7 +81,6 @@ a, button{
     to      { -webkit-transform: translateX(-200%); }
 }
 
-/* slide in from the right */
 @keyframes slideInRight {
     from    { transform:translateX(200%); }
     to      { transform: translateX(0); }
