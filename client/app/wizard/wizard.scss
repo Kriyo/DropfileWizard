@@ -70,6 +70,9 @@ a, button{
     -moz-animation:slideOutLeft 0.5s both ease;
     animation:slideOutLeft 0.5s both ease;
 }
+#testid{
+  color: #FFF;
+}
 
 @keyframes slideOutLeft {
     to      { transform: translateX(-200%); }
